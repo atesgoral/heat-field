@@ -13,6 +13,14 @@ window.onload = function () {
 
 	heatFieldCtx.scale(TILE_SIZE, TILE_SIZE);
 
+	var stageCanvas = document.getElementById('stage'),
+		stageCtx = stageCanvas.getContext('2d');
+
+	stageCanvas.width = NUM_COLS * TILE_SIZE;
+	stageCanvas.height = NUM_ROWS * TILE_SIZE;
+
+	stageCtx.scale(TILE_SIZE, TILE_SIZE);
+
 	function compToHex(c) {
 		return Math.floor(c * 255 + 256).toString(16).substr(-2);
 	}

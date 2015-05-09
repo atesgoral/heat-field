@@ -14,7 +14,7 @@ function HeatField(numCols, numRows) {
 		});
 	});
 
-	for (var i = 0; i < 1000; i++) {
+	for (var i = 0; i < numCols * numRows; i++) {
 		rows[Math.floor(Math.random() * (numRows - 2)) + 1][Math.floor(Math.random() * (numCols - 2)) + 1] = Math.random();
 	}
 
